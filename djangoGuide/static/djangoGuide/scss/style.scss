@@ -1,0 +1,16 @@
+@import "ownstyle.scss";;
+
+body{
+	background: white url("../images/3000.gif") no-repeat;
+}
+
+
+li{
+	a{
+		color: green;
+		font-size: 24px;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+}
