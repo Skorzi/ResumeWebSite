@@ -3,5 +3,5 @@ from django.urls.resolvers import URLPattern
 from mainApp import views
 
 urlpatterns = [
-    path('', views.home, name="home"),
+    path('', views.IndexView.as_view(), name="index"),
 ]

@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import generic
 
-def home(request):
-	return HttpResponse("Hello world. Youre at the main page")
+
+class IndexView(generic.TemplateView):
+    template_name = "mainApp/index.html"

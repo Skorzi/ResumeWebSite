@@ -1,0 +1,275 @@
+@import "ownstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Press+Start+2P&display=swap');
+
+html {
+
+ }
+
+
+ body {
+    background-color: #1c1c1c;
+    font-family: 'Press Start 2P', cursive;
+ }
+
+
+.wrapper {
+
+}
+.container {
+    width: 890px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.header__image {
+    padding: 50px 0 0 0;
+    margin: 0 auto;
+    max-width: 100%;
+    display: block;
+}
+.header__points {
+    display: flex;
+}
+.points {
+    width: 80px;
+    height: 25px;
+    margin: 16px auto;
+    div{
+        display: inline-block;
+        margin: 3px 0 0 8px;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.point__cyber {
+    &._active{
+        background-color: blueviolet;
+    }
+}
+.point__japan {
+    &._active{
+        background-color: #ff9c00;
+    }
+}
+.point__classik {
+    &._active{
+        background-color: #e5e5e5;
+    }
+}
+.header__menu {
+    display: block;
+    width: 100%;
+    background-color: #313a5c;
+    height: 86px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+}
+.menu__icon {
+}
+.menu__bar1 {
+}
+.menu__bar2 {
+}
+.menu__bar3 {
+}
+.menu__body {
+    width: 100%;
+    height: 86px;  
+}
+.menu__list {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    margin: 0 auto;
+    min-height: 85px;
+    
+    li{
+        a{
+            color: white;
+            transition-duration: 1s;
+        }
+        a:hover{
+            text-decoration: underline;
+            box-shadow: 0px 7px 10px #df2481;
+        }
+    }
+}
+.menu__link {
+}
+.page {
+
+}
+.page__columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page__column {
+    position: relative;
+    margin: 32px 0 0 0;
+    background-color: #232a42;
+    width: 274px;
+    height: 615px;
+    h2{
+        display: inline-block;
+        line-height: 20px;
+        padding: 30px 0 0 17px;
+        font-size: 18px;
+        color: white;
+    }
+}
+
+.page__line{
+    position: absolute;
+    width: 246px;
+    height: 9px;
+    background-color: #1f1b38;
+    top: 75px;
+    left: 14px;
+}
+
+.page__about {
+    width: 100%;
+    height: 538px;
+    margin: 32px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.page__about_block_1 {
+    width: 570px;
+    background-color: #232a42;
+}
+
+.page__about_me {
+    width: 520px;
+    border: 7px solid black;
+    margin: 14px auto 0 auto;
+}
+.page__about_me_text {
+    h2{
+        font-size: 24px;
+        color: black;
+        margin: 10px 0 0 10px;
+    }
+    p{
+        font-size: 16px;
+        margin: 20px 0 0 20px;
+    }
+}
+
+.page__about_block_2 {
+    width: 292px;
+    height: 100%;
+    background-color: #232a42;
+
+}
+
+.page__icon {
+    width: 100%;
+    height: 230px;
+    margin: 20px 0 0 0;
+    text-align: center;
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 10px solid black;
+    }
+}
+.page__text {
+    text-align: center;
+    h2{
+        font-size: 24px;
+        text-decoration: underline;
+    }
+    p{
+        margin: 30px 0 0 0;
+        font-size: 18px;
+        a{
+            color: black;
+            transition-duration: 1s;
+            
+        }
+        a:hover{
+            box-shadow: 0px 7px 10px #df2481;
+        }
+    }
+}
+
+.page__blog {
+    display: flex;
+    width: 100%;
+    height: 482px;
+    margin: 32px 0 32px 0;
+}
+.page__blog_block {
+    border: 7px solid black;
+    width: 830px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #232a42;
+}
+.footer {
+    height: 130px;
+}
+.footer__block {
+    height: 100%;
+    width: 100%;
+    background-color: #313a5c;
+}
+.footer__text {
+}
+
+@media screen and (max-width: 450px) {
+
+    .page__columns {
+        flex-direction: column;
+    }
+
+    .page__column {
+        width: 100%;
+        h2{
+            font-size: 32px;
+        }
+    }
+
+    .page__line{
+        width: 95%;
+    }
+    
+    .page__about {
+        flex-direction: column;
+        height: 1000px;
+    }
+    
+    .page__about_block_1 {
+        width: 100%;
+        height: 1500px;
+    }
+    .page__about_me{
+        width: 95%;
+        height: 90%;
+    }
+    .page__about_me_text{
+        h2{
+            font-size: 32px;
+        }
+    }
+    .page__about_block_2{
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+}
+

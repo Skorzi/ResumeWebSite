@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainApp/css/style.css' %}">
+    <title>ResumeWebSite</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                <div>
+                    <img class="header__image" src="../../static/mainApp/images/cyber.gif">
+                </div>
+                <div class="header__points points">
+                    <div class="point__cyber _active"></div>
+                    <div class="point__japan"></div>
+                    <div class="point__classik"></div>
+                </div>
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <div class="menu__bar1"></div>
+                        <div class="menu__bar2"></div>
+                        <div class="menu__bar3"></div>
+                    </div>
+                    <div class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__link"><a href="#">Home</a></li>
+                            <li class="menu__link"><a href="#">About Me</a></li>
+                            <li class="menu__link"><a href="#">Blog</a></li>
+                            <li class="menu__link"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <main class="page">
+                <div class="page__columns">
+                    <div class="page__column">
+                        <h2>Who am I</h2>
+                        <div class="page__line"></div>
+                    </div>
+                    <div class="page__column">
+                        <h2>Hello friend</h2>
+                        <div class="page__line"></div>
+                    </div>
+                    <div class="page__column">
+                        <h2>What is posting here</h2>
+                        <div class="page__line"></div>
+                    </div>
+                </div>
+                <div class="page__about">
+                    <div class="page__about_block_1">
+                        <div class="page__about_me">
+                            <div class="page__about_me_text">
+                                <h2>About Me:</h2>
+                                <p>...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__about_block_2">
+                        <div class="page__icon"><img src="../../static/mainApp/images/юзуру.jpg"></div>
+                        <div class="page__text">
+                            <h2>Skorzi</h2>
+                            <p><a href="https://github.com/Skorzi">GitHub</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page__blog">
+                    <div class="page__blog_block"></div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="footer__block">
+                <div class="footer__text"></div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
