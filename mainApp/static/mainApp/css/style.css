@@ -71,15 +71,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+html {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-color: #1c1c1c;
   font-family: 'Press Start 2P', cursive;
 }
 
 .container {
-  width: 890px;
+  width: 100%;
+  max-width: 890px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .header__image {
@@ -154,7 +160,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
   min-height: 85px;
 }
@@ -201,7 +208,7 @@ body {
 
 .page__line {
   position: absolute;
-  width: 246px;
+  width: 90%;
   height: 9px;
   background-color: #1f1b38;
   top: 75px;
@@ -210,7 +217,7 @@ body {
 
 .page__about {
   width: 100%;
-  height: 538px;
+  height: 500px;
   margin: 32px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -221,14 +228,14 @@ body {
 }
 
 .page__about_block_1 {
-  width: 570px;
   background-color: #232a42;
+  width: 100%;
+  height: 100%;
 }
 
 .page__about_me {
-  width: 520px;
   border: 7px solid black;
-  margin: 14px auto 0 auto;
+  height: 98%;
 }
 
 .page__about_me_text h2 {
@@ -243,9 +250,10 @@ body {
 }
 
 .page__about_block_2 {
-  width: 292px;
   height: 100%;
+  width: 50%;
   background-color: #232a42;
+  margin: 0 0 0 20px;
 }
 
 .page__icon {
@@ -298,7 +306,7 @@ body {
 
 .page__blog_block {
   border: 7px solid black;
-  width: 830px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   background-color: #232a42;
@@ -314,7 +322,7 @@ body {
   background-color: #313a5c;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 860px) {
   .page__columns {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -336,14 +344,6 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 1000px;
-  }
-  .page__about_block_1 {
-    width: 100%;
-    height: 1500px;
-  }
-  .page__about_me {
-    width: 95%;
-    height: 90%;
   }
   .page__about_me_text h2 {
     font-size: 32px;
