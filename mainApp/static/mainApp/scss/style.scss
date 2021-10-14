@@ -21,9 +21,14 @@ html {
     width: 100%;
     max-width: 890px;
     margin: 0 auto;
+    z-index: 50;
+    position: relative;
+
 }
 
+.header{
 
+}
 .header__image {
     padding: 50px 0 0 0;
     margin: 0 auto;
@@ -32,14 +37,14 @@ html {
 }
 .header__points {
     display: flex;
+    justify-content: space-between;
 }
 .points {
-    width: 80px;
+    max-width: 72px;
     height: 25px;
     margin: 16px auto;
     div{
         display: inline-block;
-        margin: 3px 0 0 8px;
         width: 20px;
         height: 20px;
         background-color: white;
@@ -47,6 +52,7 @@ html {
         &:hover{
             cursor: pointer;
         }
+
     }
 }
 
@@ -65,18 +71,18 @@ html {
         background-color: #e5e5e5;
     }
 }
-.header__menu {
-    display: block;
+.menu {
+    position: sticky;
+    top: 0;
     width: 100%;
     background-color: #313a5c;
     height: 86px;
-    position: sticky;
-    top: 0;
-    left: 0;
     z-index: 10;
-
 }
 .menu__icon {
+    display: none;
+    float: right;
+    margin: 24px 20px;
 }
 .menu__bar1 {
 }
@@ -85,9 +91,18 @@ html {
 .menu__bar3 {
 }
 .menu__body {
+    display: block;
     width: 100%;
     height: 86px;  
 }
+// .header__menu.fixed {
+//     position: fixed;
+//     background-color: #313a5c;
+//     height: 86px;
+//     top: 0;
+//     left: 0;
+
+//   }
 .menu__list {
     font-size: 18px;
     display: flex;
@@ -240,6 +255,18 @@ html {
 }
 
 @media screen and (max-width: 860px) {
+    
+    .wrapper{
+        margin: 0 20px;
+    }
+
+    .points {
+        max-width: 61px;
+        div{
+            width: 15px;
+            height: 15px;
+        }
+    }
 
     .page__columns {
         flex-direction: column;
@@ -248,14 +275,10 @@ html {
     .page__column {
         width: 100%;
         h2{
-            font-size: 32px;
+            font-size: 21px;
         }
     }
 
-    .page__line{
-        width: 95%;
-    }
-    
     .page__about {
         flex-direction: column;
         height: 1000px;
@@ -272,3 +295,96 @@ html {
     }
 }
 
+
+@media screen and (max-width: 750px) {
+    .menu__list {
+        max-width: 600px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .menu__bar1, .menu__bar2, .menu__bar3 {
+		width: 33px;
+		height: 3px;
+		background-color: #fff;
+		margin: 7px 0;
+		transition: all 0.3s ease 0s;
+	}
+    ._active .menu__bar1 {
+        transform: rotate(-45deg) translate(-6px, 6px);
+      }
+  
+      ._active .menu__bar2 {
+          opacity: 0;
+      }
+  
+      ._active .menu__bar3 {
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    .menu {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #313a5c;
+        height: 86px;
+        z-index: 10;
+    }
+    .menu._active {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+  
+    .menu__body{
+        display: block;
+        position: absolute;
+        left: 0%;
+        top: -200%;
+        width: 100%;
+        height: 100%;
+        transition: top 0.7s ease 0s;
+        // background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .menu__body._active{
+        top: 0;
+    }
+
+    .menu__list{
+        display: none;
+    }
+
+
+    .menu__list._active{
+        padding: 216px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        min-height: 300px;
+        max-width: none;
+    }
+
+    .menu__icon{
+        top: 0;
+        z-index: 5;
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu__icon._active{
+        position: relative;
+        margin: 24px 35px;
+        float: right;
+        transition: all 1s ease 0s;
+        z-index: 2000;
+    }
+
+    .body._lock{
+        overflow: hidden;
+    }
+}
