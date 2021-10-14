@@ -11,6 +11,7 @@ html {
  body {
     background-color: #1c1c1c;
     font-family: 'Press Start 2P', cursive;
+    transition: all 0.3s ease 0s;
  }
 
 
@@ -47,7 +48,7 @@ html {
         display: inline-block;
         width: 20px;
         height: 20px;
-        background-color: white;
+        background-color: rgb(173, 173, 173);
         border-radius: 50%;
         &:hover{
             cursor: pointer;
@@ -59,16 +60,21 @@ html {
 .point__cyber {
     &._active{
         background-color: blueviolet;
+        transition: all 0.3s ease 0s;
     }
 }
 .point__japan {
     &._active{
         background-color: #ff9c00;
+        transition: all 0.3s ease 0s;
+
     }
 }
-.point__classik {
+.point__classic {
     &._active{
-        background-color: #e5e5e5;
+        background-color: grey;
+        transition: all 0.3s ease 0s;
+
     }
 }
 .menu {
@@ -95,14 +101,7 @@ html {
     width: 100%;
     height: 86px;  
 }
-// .header__menu.fixed {
-//     position: fixed;
-//     background-color: #313a5c;
-//     height: 86px;
-//     top: 0;
-//     left: 0;
 
-//   }
 .menu__list {
     font-size: 18px;
     display: flex;
@@ -323,15 +322,7 @@ html {
       ._active .menu__bar3 {
         transform: rotate(45deg) translate(-8px, -8px);
       }
-    .menu {
-        position: sticky;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #313a5c;
-        height: 86px;
-        z-index: 10;
-    }
+
     .menu._active {
         position: fixed;
         left: 0;

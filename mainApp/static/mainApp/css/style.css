@@ -80,6 +80,8 @@ html {
 body {
   background-color: #1c1c1c;
   font-family: 'Press Start 2P', cursive;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .container {
@@ -116,7 +118,7 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: #adadad;
   border-radius: 50%;
 }
 
@@ -126,14 +128,20 @@ body {
 
 .point__cyber._active {
   background-color: blueviolet;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .point__japan._active {
   background-color: #ff9c00;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-.point__classik._active {
-  background-color: #e5e5e5;
+.point__classic._active {
+  background-color: grey;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .menu {
@@ -395,16 +403,6 @@ body {
   ._active .menu__bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-8px, -8px);
-  }
-  .menu {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #313a5c;
-    height: 86px;
-    z-index: 10;
   }
   .menu._active {
     position: fixed;
