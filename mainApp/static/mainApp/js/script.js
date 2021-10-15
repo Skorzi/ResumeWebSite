@@ -26,6 +26,10 @@ menu_icon.addEventListener("click", function (event) {
     document.body.classList.toggle("_lock")
 })
 
+let cyberTheme = "{% static 'mainApp/css/cyberTheme.css' %}"
+let classicTheme = "{% static 'mainApp/css/classicTheme.css' %}"
+var link = document.getElementById('theme-link')
+
 point_cyber.addEventListener("click", function (event) {
     checkActivePoint(event)
 })
@@ -49,39 +53,36 @@ function checkActivePoint(point) {
 
 }
 
-let bodyColor
-let menuColor
-let columnColor
-let lineColor
-let aboutBlocksColor
-let menubarColor
+// let bodyColor
+// let menuColor
+// let columnColor
+// let lineColor
+// let aboutBlocksColor
+// let menubarColor
 
 function newColors(point) {
+    let currTheme = link.getAttribute("href")
+    let theme = ""
     if (point.target.classList.contains("point__cyber")) {
-        console.log("poooooiny")
-        bodyColor = "#1c1c1c"
-        menuColor = "#313a5c"
-        columnColor = "#232a42"
-        lineColor = "#1f1b38"
-        aboutBlocksColor = "#232a42"
-        menubarColor = "#fff"
-        changeBackground(bodyColor, menuColor, columnColor, lineColor, aboutBlocksColor, menubarColor)
+        console.log("cyber")
+        currTheme = cyberTheme
+        theme = "cyber"
 
     } else if (point.target.classList.contains("point__classic")) {
-        bodyColor = "#fff"
-        menuColor = "#e6e6e6"
-        columnColor = "#e6e6e6"
-        lineColor = "#000"
-        aboutBlocksColor = "#e6e6e6"
-        menubarColor = "#000"
-        changeBackground(bodyColor, menuColor, columnColor, lineColor, aboutBlocksColor, menubarColor)
+        console.log("classic")
+        currTheme = classicTheme
+        theme = "classic"
     }
+    link.setAttribute('href', currTheme)
+    
 }
 
 
-function changeBackground(...args) {
-    document.body.style.backgroundColor = bodyColor;
-    menu_body.style.backgroundColor = menuColor;
+// function changeBackground(...args) {
+//     document.body.style.backgroundColor = bodyColor;
+//     menu_body.style.backgroundColor = menuColor;
 
 
-}
+// }
+
+
