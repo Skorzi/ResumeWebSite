@@ -26,8 +26,8 @@ menu_icon.addEventListener("click", function (event) {
     document.body.classList.toggle("_lock")
 })
 
-let cyberTheme = "{% static 'mainApp/css/cyberTheme.css' %}"
-let classicTheme = "{% static 'mainApp/css/classicTheme.css' %}"
+let cyberTheme = "../../static/mainApp/css/cyberTheme.css"
+let classicTheme = "../../static/mainApp/css/classicTheme.css"
 var link = document.getElementById('theme-link')
 
 point_cyber.addEventListener("click", function (event) {
