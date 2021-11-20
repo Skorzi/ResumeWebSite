@@ -7,39 +7,52 @@
 
 
 body{
-    background-color: #fff;
+    background-color: #c96567;
+
+}
+
+.wrapper{
+    background: url("../images/rust.png") bottom right/50% no-repeat,
+    url("../images/city2.png") bottom left/40% no-repeat;
+
 }
 
 .menu{
-    background-color: #e6e6e6;
+    background-color: #314455;
 }
 
 
 .page__column{
-    background-color: #e6e6e6;
+    background-color: #314455;
 }
 
 .page__line{
-    background-color: #000;
+    background-color: #97AABD;
 }
 
 .page__about_block_1 {
-    background-color: #e6e6e6;
+    background-color: #314455;
 }
 
 
 .page__about_block_2 {
-    background-color: #e6e6e6;
+    background-color: #314455;
 }
 
 .page__blog_block {
-    background-color: #e6e6e6;
+    background-color: #314455;
 }
 
 .footer__block {
-    background-color: #e6e6e6;
+    background-color: #314455;
 }
 
 .menu__bar1, .menu__bar2, .menu__bar3 {
-    background-color: #000;
+    background-color: #97AABD;
+}
+
+@media screen and (max-width: 1560px){
+    .wrapper{
+        background-image: none;
+    }
 }

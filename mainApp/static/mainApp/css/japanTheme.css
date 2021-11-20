@@ -1,0 +1,35 @@
+body {
+  background-color: #fbe8a6;
+}
+
+.menu {
+  background-color: #f4976c;
+}
+
+.page__column {
+  background-color: #f4976c;
+}
+
+.page__line {
+  background-color: #000;
+}
+
+.page__about_block_1 {
+  background-color: #f4976c;
+}
+
+.page__about_block_2 {
+  background-color: #f4976c;
+}
+
+.page__blog_block {
+  background-color: #f4976c;
+}
+
+.footer__block {
+  background-color: #f4976c;
+}
+
+.menu__bar1, .menu__bar2, .menu__bar3 {
+  background-color: #000;
+}

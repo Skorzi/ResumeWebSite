@@ -1,14 +1,5 @@
 "use strict"
 
-// if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-
-//     document.body.classList.add('_touch')
-
-// } else { 	
-// 	document.body.classList.add('_pc')
-// }
-
-
 let menu_icon = document.querySelector(".menu__icon")
 let menu_body = document.querySelector(".menu__body")
 let menu_list = document.querySelector(".menu__list")
@@ -28,6 +19,7 @@ menu_icon.addEventListener("click", function (event) {
 
 let cyberTheme = "../../static/mainApp/css/cyberTheme.css"
 let classicTheme = "../../static/mainApp/css/classicTheme.css"
+let japanTheme = "../../static/mainApp/css/japanTheme.css"
 var link = document.getElementById('theme-link')
 
 point_cyber.addEventListener("click", function (event) {
@@ -53,36 +45,89 @@ function checkActivePoint(point) {
 
 }
 
-// let bodyColor
-// let menuColor
-// let columnColor
-// let lineColor
-// let aboutBlocksColor
-// let menubarColor
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
 
-function newColors(point) {
-    let currTheme = link.getAttribute("href")
-    let theme = ""
-    if (point.target.classList.contains("point__cyber")) {
-        console.log("cyber")
-        currTheme = cyberTheme
-        theme = "cyber"
+function setCookie(name, value, options = {}) {
 
-    } else if (point.target.classList.contains("point__classic")) {
-        console.log("classic")
-        currTheme = classicTheme
-        theme = "classic"
+    options = {
+        path: '/',
+        // при необходимости добавьте другие значения по умолчанию
+        ...options
+    };
+
+    if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
     }
-    link.setAttribute('href', currTheme)
-    
+
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+    for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+    }
+
+    document.cookie = updatedCookie;
+}
+
+function deleteCookie(name) {
+    setCookie(name, "", {
+        'max-age': -1
+    })
 }
 
 
-// function changeBackground(...args) {
-//     document.body.style.backgroundColor = bodyColor;
-//     menu_body.style.backgroundColor = menuColor;
+function newColors(point) {
 
+    let currTheme = link.getAttribute("href")
+    let theme = ""
 
-// }
+    if (point.target.classList.contains("point__cyber")) {
+        console.log("cyber")
+        theme = "cyber"
+        setCookie("theme", theme)
+        currTheme = cyberTheme
+
+    } else if (point.target.classList.contains("point__classic")) {
+        console.log("classic")
+        theme = "classic"
+        setCookie("theme", theme)
+        currTheme = classicTheme
+
+    } else if (point.target.classList.contains("point__japan")) {
+        console.log("japan")
+        theme = "japan"
+        setCookie("theme", theme)
+        currTheme = japanTheme
+    }
+    link.setAttribute('href', currTheme)
+}
+
+function addActivePoint(point){
+    let point_active = document.querySelector(".point._active")
+    point_active.classList.remove("_active")
+    point.classList.add("_active")
+}
+
+if (getCookie('theme') == 'cyber') {
+    link.setAttribute('href', cyberTheme)
+    addActivePoint(point_cyber)
+}
+if (getCookie('theme') == 'classic') {
+    link.setAttribute('href', classicTheme)
+    addActivePoint(point_classic)
+}
+if (getCookie('theme') == 'japan') {
+    link.setAttribute('href', japanTheme)
+    addActivePoint(point_japan)
+
+}
 
 
